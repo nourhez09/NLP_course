@@ -1,0 +1,47 @@
+terminal log for sentimen_roberta 
+
+python Advanced_models\train.py sent_roberta_trained.th sent_roberta --B=8 --lr=0.00001 --epochs=2
+Got CUDA!
+tokenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 256/256 [00:00<?, ?B/s]
+C:\Users\nourh\miniconda3\envs\mon_env\Lib\site-packages\huggingface_hub\file_download.py:142: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\nourh\.cache\huggingface\hub\models--siebert--sentiment-roberta-large-english. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 687/687 [00:00<?, ?B/s]
+vocab.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 798k/798k [00:00<00:00, 3.00MB/s]
+merges.txt: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 5.57MB/s]
+special_tokens_map.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 150/150 [00:00<?, ?B/s]
+pytorch_model.bin: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.42G/1.42G [02:00<00:00, 11.8MB/s]
+current lr 1.00000e-05
+C:\Users\nourh\miniconda3\envs\mon_env\Lib\site-packages\transformers\models\roberta\modeling_roberta.py:370: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:555.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+model.safetensors:   0%|                                                                                                                          | 0.00/1.42G [00:00<?, ?B/s]Epoch: [0][0/3125]       Loss 0.0018 (0.0018)    Accuracy 100.000 (100.000)
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.42G/1.42G [02:04<00:00, 11.5MB/s]
+Epoch: [0][25/3125]     Loss 0.0024 (0.2520)    Accuracy 100.000 (95.673)
+Epoch: [0][50/3125]     Loss 0.4933 (0.3124)    Accuracy 87.500 (93.382)
+Epoch: [0][75/3125]     Loss 0.1383 (0.3188)    Accuracy 87.500 (91.612)
+Epoch: [0][100/3125]    Loss 0.0270 (0.2913)    Accuracy 100.000 (92.079)
+Epoch: [0][125/3125]    Loss 0.0752 (0.2761)    Accuracy 100.000 (92.063)
+Epoch: [0][150/3125]    Loss 0.8498 (0.2638)    Accuracy 75.000 (92.219)
+Epoch: [0][175/3125]    Loss 0.2860 (0.2527)    Accuracy 87.500 (92.472)
+Epoch: [0][200/3125]    Loss 0.0139 (0.2372)    Accuracy 100.000 (92.662)
+Epoch: [0][225/3125]    Loss 0.0497 (0.2333)    Accuracy 100.000 (92.754)
+Epoch: [0][250/3125]    Loss 0.0265 (0.2270)    Accuracy 100.000 (93.028)
+Epoch: [0][200/3125]    Loss 0.0139 (0.2372)    Accuracy 100.000 (92.662)
+Epoch: [0][225/3125]    Loss 0.0497 (0.2333)    Accuracy 100.000 (92.754)
+Epoch: [0][250/3125]    Loss 0.0265 (0.2270)    Accuracy 100.000 (93.028)
+Epoch: [0][225/3125]    Loss 0.0497 (0.2333)    Accuracy 100.000 (92.754)
+Epoch: [0][250/3125]    Loss 0.0265 (0.2270)    Accuracy 100.000 (93.028)
+Epoch: [0][250/3125]    Loss 0.0265 (0.2270)    Accuracy 100.000 (93.028)
+Epoch: [0][275/3125]    Loss 0.0283 (0.2210)    Accuracy 100.000 (93.207)
+Epoch: [0][300/3125]    Loss 0.0508 (0.2148)    Accuracy 100.000 (93.397)
+Epoch: [0][325/3125]    Loss 0.0898 (0.2144)    Accuracy 100.000 (93.443)
+Epoch: [0][350/3125]    Loss 0.0936 (0.2092)    Accuracy 100.000 (93.554)
+Epoch: [0][375/3125]    Loss 0.0434 (0.2057)    Accuracy 100.000 (93.684)
+Epoch: [0][400/3125]    Loss 0.0464 (0.2020)    Accuracy 100.000 (93.797)
+Epoch: [0][425/3125]    Loss 0.0282 (0.1975)    Accuracy 100.000 (93.867)
+
+Epoch: [0][425/3125]    Loss 0.0282 (0.1975)    Accuracy 100.000 (93.867)
+Epoch: [0][450/3125]    Loss 0.0275 (0.1947)    Accuracy 100.000 (93.902)
+Epoch: [0][475/3125]    Loss 0.1590 (0.1941)    Accuracy 87.500 (93.803)
+Epoch: [0][500/3125]    Loss 0.1063 (0.1913)    Accuracy 100.000 (93.862)
+Epoch: [0][525/3125]    Loss 0.0943 (0.1889)    Accuracy 100.000 (93.940)
